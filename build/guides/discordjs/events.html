@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/an-old-hope.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/recommendations.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+
+    
+    <meta id="og-title" property="og:title" content="Events">
+    <meta id="og-description" property="og:description" content="Understanding Discord.JS events.">
+    <meta id="og-image" property="og:image" content="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
+    <link rel="icon" type="image/png" href="/assets/images/square-logo.png" >
+
+    
+    <meta id="meta-keywords" name="keywords" content="discordjs, events, Understanding Discord.JS events.">
+    <meta id="meta-desc" name="description" content="Understanding Discord.JS events.">
+    <meta id="meta-robots" name="robots" content="discordjs, events, Understanding Discord.JS events.">
+    <meta id="meta-google" name="googlebot" content="discordjs, events, Understanding Discord.JS events.">
+
+    
+    <div id="navbar"><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/"><img src="/assets/images/logo.png" width="112" height="28"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="__navbar-contents__">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="__navbar-contents__">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/guides">Guides</a>
+            <a class="navbar-item" href="/blog">Blog</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Social</a>
+            
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/discord">Discord</a>
+                    <a class="navbar-item" href="https://github.com/zyrouge">GitHub</a>
+                    <a class="navbar-item" href="https://www.instagram.com/_zyrouge_">Instagram</a>
+                    <a class="navbar-item" href="/youtube">YouTube</a>
+                    <a class="navbar-item" href="https://twitter.com/_zyrouge_">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="/discord">
+                        <strong><i class="fab fa-discord"></i> Discord</strong>
+                    </a>
+                    <a class="button is-primary" href="/patreon">
+                        <strong><i class="fas fa-heart"></i> Patreon</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/_navbar.js"></script>
+</nav></div>
+</head>
+
+<body>
+    
+    <section class="section">
+        <div class="container">
+            <p id="title" class="title is-1">Events</p>
+            <p id="description" class="subtitle is-3">Understanding Discord.JS events.</p>
+            <img id="hero" src="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
+            <hr>
+            <div id="content"><ul>
+<li>Discord.JS triggers certain events when a <code>message</code> is sent or <code>ready</code> when the bot is ready.</li>
+</ul>
+<div class="admonition info"><br><article class="message is-info"><div class="message-body">All the events can be referred here <a href="https://discord.js.org/#/docs/main/stable/class/Client">https://discord.js.org/#/docs/main/stable/class/Client</a></div></article></div>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Creating Event Handlers</h2>
+<p>An Overview of using events.</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">client.on('eventName', (args) =&gt; {
+    // Handle the events here
+});
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Example</h2>
+<p>Example of <code>messageDelete</code> event.</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">client.on(&quot;messageDelete&quot;, (message) =&gt; {
+   console.log(`Content: ${message.content}\nGuild: ${message.guild.name}\nAuthor: ${message.author.tag}\nChannel: ${message.channel.name}`);
+});
+</code></pre>
+</div>
+            <hr>
+            <p id="title" class="title is-3">Recommended Posts</p>
+            <div id="recommendations" class="columns"></div>
+        </div>
+    </section>
+
+    
+    <div id="footer"><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; Copyright 2020 <strong>ZYROUGE</strong>. Blog created using <a href="https://www.markdownguide.org/">Markdown</a> and <a href="https://bulma.io/">Bulma</a>!
+        </p>
+    </div>
+</footer></div>
+</body>
+
+<style>
+    .hljs-ln-n:before {
+        opacity: 0.4;
+    }
+
+    .hljs-ln-n {
+        margin-right: 15px;
+    }
+</style>
+</html>

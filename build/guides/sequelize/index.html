@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting started with Sequelize</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/an-old-hope.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/recommendations.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+
+    
+    <meta id="og-title" property="og:title" content="Getting started with Sequelize">
+    <meta id="og-description" property="og:description" content="Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.">
+    <meta id="og-image" property="og:image" content="https://mherman.org/assets/img/blog/node-sequelize.png">
+    <link rel="icon" type="image/png" href="/assets/images/square-logo.png" >
+
+    
+    <meta id="meta-keywords" name="keywords" content="zyrouge, sequelize, Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.">
+    <meta id="meta-desc" name="description" content="Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.">
+    <meta id="meta-robots" name="robots" content="zyrouge, sequelize, Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.">
+    <meta id="meta-google" name="googlebot" content="zyrouge, sequelize, Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.">
+
+    
+    <div id="navbar"><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/"><img src="/assets/images/logo.png" width="112" height="28"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="__navbar-contents__">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="__navbar-contents__">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/guides">Guides</a>
+            <a class="navbar-item" href="/blog">Blog</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Social</a>
+            
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/discord">Discord</a>
+                    <a class="navbar-item" href="https://github.com/zyrouge">GitHub</a>
+                    <a class="navbar-item" href="https://www.instagram.com/_zyrouge_">Instagram</a>
+                    <a class="navbar-item" href="/youtube">YouTube</a>
+                    <a class="navbar-item" href="https://twitter.com/_zyrouge_">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="/discord">
+                        <strong><i class="fab fa-discord"></i> Discord</strong>
+                    </a>
+                    <a class="button is-primary" href="/patreon">
+                        <strong><i class="fas fa-heart"></i> Patreon</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/_navbar.js"></script>
+</nav></div>
+</head>
+
+<body>
+    
+    <section class="section">
+        <div class="container">
+            <p id="title" class="title is-1">Getting started with Sequelize</p>
+            <p id="description" class="subtitle is-3">Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading and more.</p>
+            <img id="hero" src="https://mherman.org/assets/img/blog/node-sequelize.png">
+            <hr>
+            <div id="content"><h2 class="subtitle is-2  is-spaced ">Installing Sequelize</h2>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-text">$ npm install sequelize
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Official Documentation</h2>
+<ul>
+<li><a href="https://sequelize.org/v5">Sequelize v5</a></li>
+<li><a href="https://sequelize.org/v4/">Sequelize v4</a></li>
+<li><a href="https://sequelize.org/v3">Sequelize v3</a></li>
+</ul>
+</div>
+            <hr>
+            <p id="title" class="title is-3">Recommended Posts</p>
+            <div id="recommendations" class="columns"></div>
+        </div>
+    </section>
+
+    
+    <div id="footer"><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; Copyright 2020 <strong>ZYROUGE</strong>. Blog created using <a href="https://www.markdownguide.org/">Markdown</a> and <a href="https://bulma.io/">Bulma</a>!
+        </p>
+    </div>
+</footer></div>
+</body>
+
+<style>
+    .hljs-ln-n:before {
+        opacity: 0.4;
+    }
+
+    .hljs-ln-n {
+        margin-right: 15px;
+    }
+</style>
+</html>

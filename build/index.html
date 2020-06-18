@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZYROUGE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/an-old-hope.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/recommendations.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+
+    
+    <meta property="og:title" content="ZYROUGE" >
+    <meta property="og:description" content="Personal Portfolio & Blog!" >
+    <meta property="og:image" content="/assets/images/logo.png" >
+    <link rel="icon" type="image/png" href="/assets/images/square-logo.png">
+
+    
+    <meta id="meta-keywords" name="keywords" content="zyrouge, blog, First page of my website!">
+    <meta id="meta-desc" name="description" content="First page of my website!">
+    <meta id="meta-robots" name="robots" content="zyrouge, blog, First page of my website!">
+    <meta id="meta-google" name="googlebot" content="zyrouge, blog, First page of my website!">
+
+    
+    <div id="navbar"><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/"><img src="/assets/images/logo.png" width="112" height="28"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="__navbar-contents__">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="__navbar-contents__">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/guides">Guides</a>
+            <a class="navbar-item" href="/blog">Blog</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Social</a>
+            
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/discord">Discord</a>
+                    <a class="navbar-item" href="https://github.com/zyrouge">GitHub</a>
+                    <a class="navbar-item" href="https://www.instagram.com/_zyrouge_">Instagram</a>
+                    <a class="navbar-item" href="/youtube">YouTube</a>
+                    <a class="navbar-item" href="https://twitter.com/_zyrouge_">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="/discord">
+                        <strong><i class="fab fa-discord"></i> Discord</strong>
+                    </a>
+                    <a class="button is-primary" href="/patreon">
+                        <strong><i class="fas fa-heart"></i> Patreon</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/_navbar.js"></script>
+</nav></div>
+</head>
+
+<body>
+    
+    <section class="section">
+        <div class="container">
+            <div id="content"><div class="buttons is-centered">
+    <a class="button is-light" href="mailto:me@zyrouge.gq"><i class="far fa-envelope" style="margin-right: 5px"></i> Mail</a>
+    <a class="button is-dark" href="https://github.com/zyrouge"><i class="fab fa-github" style="margin-right: 5px"></i> GitHub</a>
+    <a class="button is-link" href="/discord"><i class="fab fa-discord" style="margin-right: 5px"></i> Discord</a>
+    <a class="button is-danger" href="/youtube"><i class="fab fa-youtube" style="margin-right: 5px"></i> YouTube</a>
+    <a class="button is-primary" href="https://twitter.com/_zyrouge_"><i class="fab fa-twitter" style="margin-right: 5px"></i> Twitter</a>
+    <a class="button is-info" href="https://instagram.com/_zyrouge_"><i class="fab fa-instagram" style="margin-right: 5px"></i> Instagram</a>
+    <a class="button is-black" href="https://steamcommunity.com/id/_zyrouge_"><i class="fab fa-steam" style="margin-right: 5px"></i> Steam</a>
+    <a class="button is-link" href="https://www.twitch.tv/zyrouge" style="background: #6441a5">
+        <i class="fab fa-twitch" style="margin-right: 5px"></i> Twitch
+    </a>
+    <a class="button is-danger" href="/patreon" style="background: #f96854">
+        <i class="fab fa-patreon" style="margin-right: 5px"></i> Patreon
+    </a>
+    <a class="button is-success"
+    href="https://open.spotify.com/playlist/3RSl8EyfAO6kdpODN0jDfl?si=XgKkDqf0Rt6m9y2yERzEFA"
+    style="background: #1db954">
+        <i class="fab fa-spotify" style="margin-right: 5px"></i> Spotify
+    </a>
+    <a class="button is-danger" href="https://www.reddit.com/user/zyrouge" style="background: #FF5700">
+        <i class="fab fa-reddit" style="margin-right: 5px"></i> Reddit
+    </a>
+    <a class="button is-link" href="https://www.facebook.com/zyrouge95" style="background: #3b5998">
+        <i class="fab fa-facebook" style="margin-right: 5px"></i> Facebook
+    </a>
+</div>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Projects</h2>
+<div class="showcase">
+    <div class="columns">
+        <div class="column is-half">
+            <div class="box">
+                <div class="content">
+                    <h4 class="subtitle is-4  is-spaced title is-3">API</h4>
+                    <p class="subtitle is-6">Swiss knife for Discord Developers</p>
+                    <a class="button is-danger" href="https://api.zyrouge.gq"><i class="fas fa-link" style="margin-right: 5px;"></i> Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="box">
+                <div class="content">
+                    <h4 class="subtitle is-4  is-spaced title is-3">Genius Lyrics</h4>
+                    <p class="subtitle is-6">Fetch Lyrics from Genius.com at ease!</p>
+                    <div class="buttons">
+                        <a class="button is-warning" href="https://genius-lyrics.zyrouge.gq">
+                            <i class="fas fa-link" style="margin-right: 5px;"></i> Visit
+                        </a>
+                        <a class="button is-danger" href="https://npmjs.com/genius-lyrics">
+                            <i class="fab fa-npm" style="margin-right: 5px"></i> NPM
+                        </a>
+                        <a class="button is-dark" href="https://github.com/zyrouge/genius-lyrics">
+                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="title is-3">Discord related projects</p>
+    <div class="columns">
+        <div class="column is-half">
+            <div class="box">
+                <div class="content">
+                    <h4 class="subtitle is-4  is-spaced title is-3">Xeno Bot List</h4>
+                    <p class="subtitle is-6">Easy to setup and run bot list like top.gg</p>
+                    <div class="buttons">
+                        <a class="button is-info" href="https://botlist.zyrouge.gq">
+                            <i class="fas fa-link" style="margin-right: 5px"></i> Visit
+                        </a>
+                        <a class="button is-dark" href="https://github.com/zyrouge/xeno-bot-list">
+                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half">
+            <div class="box">
+                <div class="content">
+                    <h4 class="subtitle is-4  is-spaced title is-3">Aurora</h4>
+                    <p class="subtitle is-6">A Multipurpose fun bot!</p>
+                    <div class="buttons">
+                        <a class="button is-dark" href="https://github.com/zyrouge/aurora-bot">
+                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="title is-3">Languages & frameworks I know</p>
+    <div class="content">
+        <ul>
+            <li><a target="_blank" href="https://nodejs.org">NodeJS</a></li>
+            <li><a target="_blank" href="http://vanilla-js.com/">VanillaJS</a></li>
+            <li><a target="_blank" href="https://jquery.com/">JQuery</a></li>
+            <li><a target="_blank" href="https://vuejs.org/">Vue</a></li>
+            <li><a target="_blank" href="https://nuxtjs.org/">Nuxt</a></li>
+            <li><a target="_blank" href="https://www.typescriptlang.org/">Typescript</a></li>
+            <li>HTML & CSS</li>
+            <li>
+                <a target="_blank" href="https://discord.js.org">DiscordJS</a> & 
+                <a target="_blank" href="https://abal.moe/Eris">Eris</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Posts</h2>
+<div class="field">
+    <p class="control has-icons-left">
+        <input class="input" type="text" placeholder="Search posts..." id="recommendations-search">
+        <span class="icon is-small is-left">
+            <i class="fas fa-search"></i>
+        </span>
+    </p>
+</div><br>
+<div id="recommendations-box"></div></div>
+        </div>
+    </section>
+
+    
+    <div id="footer"><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; Copyright 2020 <strong>ZYROUGE</strong>. Blog created using <a href="https://www.markdownguide.org/">Markdown</a> and <a href="https://bulma.io/">Bulma</a>!
+        </p>
+    </div>
+</footer></div>
+</body>
+
+</html>
