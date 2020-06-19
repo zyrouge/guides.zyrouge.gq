@@ -32,13 +32,13 @@ $(async function () {
         // Search
         const searchInput = $("#recommendations-search");
         refreshPosts();
-        searchInput.on("change keyup paste", function () {
+        if(searchInput) searchInput.on("change keyup paste", function () {
             refreshPosts();
         });
         function refreshPosts() {
-            const searchTerms = searchInput.val().toLowerCase();
-            const resultPosts = searchPosts.search(searchTerms);
-            recommendationsBoxHTML(recommendationsBox, searchTerms ? resultPosts.sort((a, b) => a.score - b.score).map(x => x.item) : routes);
+            const searchTerms = searchInput && searchInput.val() ? searchInput.val().toLowerCase() : false;
+            const resultPosts = searchTerms ? searchPosts.search(searchTerms) : false;
+            recommendationsBoxHTML(recommendationsBox, searchTerms && resultPosts && resultPosts.length ? resultPosts.sort((a, b) => a.score - b.score).map(x => x.item) : routes);
         }
     }
     if (recommendationsSnippet) {
