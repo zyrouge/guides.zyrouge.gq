@@ -114,6 +114,7 @@ writtenAt: 18 Jun 2020 14:28
                 <a target="_blank" href="https://discord.js.org">DiscordJS</a> & 
                 <a target="_blank" href="https://abal.moe/Eris">Eris</a>
             </li>
+            <li>C++ Basics</li>
         </ul>
     </div>
 </div>
