@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rank card using canvas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/an-old-hope.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/recommendations.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        hljs.initLineNumbersOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+
+    
+    <meta id="og-title" property="og:title" content="Rank card using canvas">
+    <meta id="og-description" property="og:description" content="How to create a awesome rank card using only canvas!">
+    <meta id="og-image" property="og:image" content="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
+    <link rel="icon" type="image/png" href="/assets/images/square-logo.png" >
+
+    
+    <meta id="meta-keywords" name="keywords" content="discordjs, rank card, canvas, How to create a awesome rank card using only canvas!">
+    <meta id="meta-desc" name="description" content="How to create a awesome rank card using only canvas!">
+    <meta id="meta-robots" name="robots" content="discordjs, rank card, canvas, How to create a awesome rank card using only canvas!">
+    <meta id="meta-google" name="googlebot" content="discordjs, rank card, canvas, How to create a awesome rank card using only canvas!">
+
+    
+    <div id="navbar"><nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/"><img src="/assets/images/logo.png" width="112" height="28"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="__navbar-contents__">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" id="__navbar-contents__">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">Home</a>
+            <a class="navbar-item" href="/guides">Guides</a>
+            <a class="navbar-item" href="/blog">Blog</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Social</a>
+            
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/discord">Discord</a>
+                    <a class="navbar-item" href="https://github.com/zyrouge">GitHub</a>
+                    <a class="navbar-item" href="https://www.instagram.com/_zyrouge_">Instagram</a>
+                    <a class="navbar-item" href="/youtube">YouTube</a>
+                    <a class="navbar-item" href="https://twitter.com/_zyrouge_">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="/discord">
+                        <strong><i class="fab fa-discord"></i> Discord</strong>
+                    </a>
+                    <a class="button is-primary" href="/patreon">
+                        <strong><i class="fas fa-heart"></i> Patreon</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/_navbar.js"></script>
+</nav></div>
+</head>
+
+<body>
+    
+    <section class="section">
+        <div class="container">
+            <p id="title" class="title is-1">Rank card using canvas</p>
+            <p id="description" class="subtitle is-3">How to create a awesome rank card using only canvas!</p>
+            <img id="hero" src="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
+            <hr>
+            <div id="content"><h2 class="subtitle is-2  is-spaced ">Preview</h2>
+<p>Output:</p>
+<img src="https://media.discordapp.net/attachments/706710007441260595/719947058047352862/rank.png">
+<div class="admonition warning"><br><article class="message is-warning"><div class="message-body">The above using a different font</div></article></div>
+<br>
+<p>Base:</p>
+<img src="/assets/images/others/discord-js-rank-card.png">
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Alternative</h2>
+<p>If you are a beginner, you can use <a href="https://www.npmjs.com/package/canvacord">canvacord</a> to do this!</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-bash">$ npm install canvacord
+</code></pre>
+<div class="admonition info"><br><article class="message is-info"><div class="message-body">Canvacord has the same code below!</div></article></div>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Installing Canvas</h2>
+<p>Open your command prompt (or) powershell and run the following command.</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-bash">$ npm install canvas
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Creating a canvas</h2>
+<p>Creating a new canvas to begin the rank card!</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
+const canvas = Canvas.createCanvas(934, 282); // Use this measurement if you are using the card in this tutorial
+const ctx = canvas.getContext(&quot;2d&quot;);
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Rank Card base</h2>
+<p>You can use the base picture used in this tutorial or make your own one!</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
+const canvas = Canvas.createCanvas(934, 282);
+const ctx = canvas.getContext(&quot;2d&quot;);
+
+const rankCard = await Canvas.loadImage(&quot;https://zyrouge.gq/assets/images/others/discord-js-rank-card.png&quot;);
+ctx.drawImage(rankCard, 0, 0, canvas.width, canvas.height);
+
+const font = &quot;Arial&quot;; // Default font
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Username</h2>
+<p>Now lets write the username on the card</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`; // Weight - Bold, Size - 36px
+ctx.fillStyle = &quot;#FFFFFF&quot;; // Color in hex value
+ctx.textAlign = &quot;start&quot;; // Position of text starting
+const name = username &gt; 7 ? username.substring(0, 7).trim() + '...' : username; // Shorten name if its long
+ctx.fillText(`${name}`, 264, 164); // Writing the username
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Discrim</h2>
+<p>Writing Discriminator (<code>#0950</code>) in the card</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `36px ${font}`; // Weight - Normal
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;; // Reducing opacity using rgba
+ctx.textAlign = &quot;start&quot;;
+if(discrim) ctx.fillText(`#${discrim}`, ctx.measureText(name).width + 10 + 316, 164); // Writing discrim
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Level</h2>
+<p>Writing the Level of the user in the card</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = '#FFFFFF';
+ctx.textAlign = &quot;end&quot;;
+ctx.fillText(level, 934 - 64, 82); // const level = level of the user
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
+ctx.fillText(&quot;LEVEL&quot;, 934 - 64 - ctx.measureText(level).width - 16, 82); // Writing &quot;LEVEL&quot;
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Rank</h2>
+<p>Writing the Rank (<code>#10</code>) of the user in the card</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.textAlign = &quot;end&quot;;
+ctx.fillText(rank, 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16, 82); // const rank = rank of the user
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
+ctx.fillText(&quot;RANK&quot;, 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16 - ctx.measureText(rank).width - 16, 82); // Writing &quot;RANK&quot;
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Writing Current and Needed EXP</h2>
+<p>You must calculate proper value of current experience points and the maximum expirence point of the current level. This is also needed for progress bar in the card.</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.5)&quot;;
+ctx.textAlign = &quot;start&quot;;
+ctx.fillText(&quot;/ &quot; + neededXP, 624 + ctx.measureText(currentXP).width + 10, 164);
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.fillText(currentXP, 624, 164);
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Progress bar</h2>
+<p>This is the most complex part of the entire rank card. This might be tricky but everything is possible.</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.beginPath();
+ctx.fillStyle = &quot;#424751&quot;;
+ctx.arc(257 + 18.5, 147.5 + 18.5 + 36.25, 18.5, 1.5 * Math.PI, 0.5 * Math.PI, true);
+ctx.fill();
+ctx.fillRect(257 + 18.5, 147.5 + 36.25, 615 - 18.5, 37.5);
+ctx.arc(257 + 615, 147.5 + 18.5 + 36.25, 18.75, 1.5 * Math.PI, 0.5 * Math.PI, false);
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.arc(257 + 18.5, 147.5 + 18.5 + 36.25, 18.5, 1.5 * Math.PI, 0.5 * Math.PI, true);
+ctx.fill();
+ctx.fillRect(257 + 18.5, 147.5 + 36.25, widthXP, 37.5);
+ctx.arc(257 + 18.5 + widthXP, 147.5 + 18.5 + 36.25, 18.75, 1.5 * Math.PI, 0.5 * Math.PI, false);
+ctx.fill();
+</code></pre>
+<div class="admonition info"><br><article class="message is-info"><div class="message-body">If your bar exceeds the bar graph, add the below code before making the progress bar.</div></article></div>
+<br>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">let widthXP = (currentXP * 615) / neededXP;
+if (widthXP &gt; 615 - 18.5) widthXP = 615 - 18.5;
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Avatar</h2>
+<p>Finally drawing the avatar of the user</p>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const avatar = await Canvas.loadImage(avatarURLoftheUser);
+ctx.drawImage(avatar, 85, 66, 150, 150);
+</code></pre>
+<div class="admonition info"><br><article class="message is-info"><div class="message-body">If you want a circle avatar you can clip the path before drawing the avatar!</div></article></div>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Getting the Buffer</h2>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const card = canvas.toBuffer();
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Full Code</h2>
+<pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
+const canvas = Canvas.createCanvas(934, 282);
+const ctx = canvas.getContext(&quot;2d&quot;);
+
+const rankCard = await Canvas.loadImage(&quot;https://zyrouge.gq/assets/images/others/discord-js-rank-card.png&quot;);
+ctx.drawImage(rankCard, 0, 0, canvas.width, canvas.height);
+
+const font = &quot;Arial&quot;;
+
+ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = &quot;#FFFFFF&quot;;
+ctx.textAlign = &quot;start&quot;;
+const name = username &gt; 7 ? username.substring(0, 7).trim() + '...' : username;
+ctx.fillText(`${name}`, 264, 164);
+
+ctx.font = `36px ${font}`;
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
+ctx.textAlign = &quot;center&quot;;
+if(discrim) ctx.fillText(`#${discrim}`, ctx.measureText(name).width + 10 + 316, 164);
+
+ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = '#FFFFFF';
+ctx.textAlign = &quot;end&quot;;
+ctx.fillText(level, 934 - 64, 82);
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
+ctx.fillText(&quot;LEVEL&quot;, 934 - 64 - ctx.measureText(level).width - 16, 82);
+
+ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.textAlign = &quot;end&quot;;
+ctx.fillText(rank, 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16, 82);
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
+ctx.fillText(&quot;RANK&quot;, 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16 - ctx.measureText(rank).width - 16, 82);
+
+ctx.font = `bold 36px ${font}`;
+ctx.fillStyle = &quot;rgba(255, 255, 255, 0.5)&quot;;
+ctx.textAlign = &quot;start&quot;;
+ctx.fillText(&quot;/ &quot; + neededXP, 624 + ctx.measureText(currentXP).width + 10, 164);
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.fillText(currentXP, 624, 164);
+
+let widthXP = (currentXP * 615) / neededXP;
+if (widthXP &gt; 615 - 18.5) widthXP = 615 - 18.5;
+
+ctx.beginPath();
+ctx.fillStyle = &quot;#424751&quot;;
+ctx.arc(257 + 18.5, 147.5 + 18.5 + 36.25, 18.5, 1.5 * Math.PI, 0.5 * Math.PI, true);
+ctx.fill();
+ctx.fillRect(257 + 18.5, 147.5 + 36.25, 615 - 18.5, 37.5);
+ctx.arc(257 + 615, 147.5 + 18.5 + 36.25, 18.75, 1.5 * Math.PI, 0.5 * Math.PI, false);
+ctx.fill();
+
+ctx.beginPath();
+ctx.fillStyle = &quot;#ffffff&quot;;
+ctx.arc(257 + 18.5, 147.5 + 18.5 + 36.25, 18.5, 1.5 * Math.PI, 0.5 * Math.PI, true);
+ctx.fill();
+ctx.fillRect(257 + 18.5, 147.5 + 36.25, widthXP, 37.5);
+ctx.arc(257 + 18.5 + widthXP, 147.5 + 18.5 + 36.25, 18.75, 1.5 * Math.PI, 0.5 * Math.PI, false);
+ctx.fill();
+
+const avatar = await Canvas.loadImage(avatarURL);
+ctx.drawImage(avatar, 85, 66, 150, 150);
+
+const card = canvas.toBuffer();
+</code></pre>
+<hr>
+<h2 class="subtitle is-2  is-spaced ">Other Examples</h2>
+<p><a href="https://github.com/zyrouge/aurora-bot">Aurora</a>'s rank card:</p>
+<img src="https://media.discordapp.net/attachments/594543235607822367/709288549882789899/rank_582836817305272320_521007613475946496.png"></div>
+            <hr>
+            <p id="title" class="title is-3">Recommended Posts</p>
+            <div id="recommendations" class="columns"></div>
+        </div>
+    </section>
+
+    
+    <div id="footer"><footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; Copyright 2020 <strong>ZYROUGE</strong>. Blog created using <a href="https://www.markdownguide.org/">Markdown</a> and <a href="https://bulma.io/">Bulma</a>!
+        </p>
+    </div>
+</footer></div>
+</body>
+
+<style>
+    .hljs-ln-n:before {
+        opacity: 0.4;
+    }
+
+    .hljs-ln-n {
+        margin-right: 15px;
+    }
+</style>
+</html>
