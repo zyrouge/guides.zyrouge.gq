@@ -11,6 +11,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/recommendations.js"></script>
+    <script src="/assets/js/scroll.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
@@ -85,7 +86,7 @@
             <p id="description" class="subtitle is-3">How to create a awesome rank card using only canvas!</p>
             <img id="hero" src="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
             <hr>
-            <div id="content"><h2 class="subtitle is-2  is-spaced ">Preview</h2>
+            <div id="content"><h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#preview" id="preview">#</a> Preview</h2>
 <p>Output:</p>
 <img src="https://media.discordapp.net/attachments/706710007441260595/719947058047352862/rank.png">
 <div class="admonition warning"><br><article class="message is-warning"><div class="message-body">The above using a different font</div></article></div>
@@ -93,25 +94,25 @@
 <p>Base:</p>
 <img src="/assets/images/others/discord-js-rank-card.png">
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Alternative</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#alternative" id="alternative">#</a> Alternative</h2>
 <p>If you are a beginner, you can use <a href="https://www.npmjs.com/package/canvacord">canvacord</a> to do this!</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-bash">$ npm install canvacord
 </code></pre>
 <div class="admonition info"><br><article class="message is-info"><div class="message-body">Canvacord has the same code below!</div></article></div>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Installing Canvas</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#installing-canvas" id="installing-canvas">#</a> Installing Canvas</h2>
 <p>Open your command prompt (or) powershell and run the following command.</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-bash">$ npm install canvas
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Creating a canvas</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#creating-a-canvas" id="creating-a-canvas">#</a> Creating a canvas</h2>
 <p>Creating a new canvas to begin the rank card!</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
 const canvas = Canvas.createCanvas(934, 282); // Use this measurement if you are using the card in this tutorial
 const ctx = canvas.getContext(&quot;2d&quot;);
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Rank Card base</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#rank-card-base" id="rank-card-base">#</a> Rank Card base</h2>
 <p>You can use the base picture used in this tutorial or make your own one!</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
 const canvas = Canvas.createCanvas(934, 282);
@@ -123,7 +124,7 @@ ctx.drawImage(rankCard, 0, 0, canvas.width, canvas.height);
 const font = &quot;Arial&quot;; // Default font
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Username</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#username" id="username">#</a> Username</h2>
 <p>Now lets write the username on the card</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`; // Weight - Bold, Size - 36px
 ctx.fillStyle = &quot;#FFFFFF&quot;; // Color in hex value
@@ -132,7 +133,7 @@ const name = username &gt; 7 ? username.substring(0, 7).trim() + '...' : usernam
 ctx.fillText(`${name}`, 264, 164); // Writing the username
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Discrim</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#discrim" id="discrim">#</a> Discrim</h2>
 <p>Writing Discriminator (<code>#0950</code>) in the card</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `36px ${font}`; // Weight - Normal
 ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;; // Reducing opacity using rgba
@@ -140,7 +141,7 @@ ctx.textAlign = &quot;start&quot;;
 if(discrim) ctx.fillText(`#${discrim}`, ctx.measureText(name).width + 10 + 316, 164); // Writing discrim
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Level</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#level" id="level">#</a> Level</h2>
 <p>Writing the Level of the user in the card</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
 ctx.fillStyle = '#FFFFFF';
@@ -150,7 +151,7 @@ ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
 ctx.fillText(&quot;LEVEL&quot;, 934 - 64 - ctx.measureText(level).width - 16, 82); // Writing &quot;LEVEL&quot;
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Rank</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#rank" id="rank">#</a> Rank</h2>
 <p>Writing the Rank (<code>#10</code>) of the user in the card</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
 ctx.fillStyle = &quot;#ffffff&quot;;
@@ -160,7 +161,7 @@ ctx.fillStyle = &quot;rgba(255, 255, 255, 0.4)&quot;;
 ctx.fillText(&quot;RANK&quot;, 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16 - ctx.measureText(rank).width - 16, 82); // Writing &quot;RANK&quot;
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Writing Current and Needed EXP</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#writing-current-and-needed-exp" id="writing-current-and-needed-exp">#</a> Writing Current and Needed EXP</h2>
 <p>You must calculate proper value of current experience points and the maximum expirence point of the current level. This is also needed for progress bar in the card.</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.font = `bold 36px ${font}`;
 ctx.fillStyle = &quot;rgba(255, 255, 255, 0.5)&quot;;
@@ -170,7 +171,7 @@ ctx.fillStyle = &quot;#ffffff&quot;;
 ctx.fillText(currentXP, 624, 164);
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Progress bar</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#progress-bar" id="progress-bar">#</a> Progress bar</h2>
 <p>This is the most complex part of the entire rank card. This might be tricky but everything is possible.</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">ctx.beginPath();
 ctx.fillStyle = &quot;#424751&quot;;
@@ -194,18 +195,18 @@ ctx.fill();
 if (widthXP &gt; 615 - 18.5) widthXP = 615 - 18.5;
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Avatar</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#avatar" id="avatar">#</a> Avatar</h2>
 <p>Finally drawing the avatar of the user</p>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const avatar = await Canvas.loadImage(avatarURLoftheUser);
 ctx.drawImage(avatar, 85, 66, 150, 150);
 </code></pre>
 <div class="admonition info"><br><article class="message is-info"><div class="message-body">If you want a circle avatar you can clip the path before drawing the avatar!</div></article></div>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Getting the Buffer</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#getting-the-buffer" id="getting-the-buffer">#</a> Getting the Buffer</h2>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const card = canvas.toBuffer();
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Full Code</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#full-code" id="full-code">#</a> Full Code</h2>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Canvas = require(&quot;canvas&quot;);
 const canvas = Canvas.createCanvas(934, 282);
 const ctx = canvas.getContext(&quot;2d&quot;);
@@ -272,7 +273,7 @@ ctx.drawImage(avatar, 85, 66, 150, 150);
 const card = canvas.toBuffer();
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Other Examples</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#other-examples" id="other-examples">#</a> Other Examples</h2>
 <p><a href="https://github.com/zyrouge/aurora-bot">Aurora</a>'s rank card:</p>
 <img src="https://media.discordapp.net/attachments/594543235607822367/709288549882789899/rank_582836817305272320_521007613475946496.png"></div>
             <hr>

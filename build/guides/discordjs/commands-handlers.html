@@ -11,6 +11,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/recommendations.js"></script>
+    <script src="/assets/js/scroll.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
@@ -85,7 +86,7 @@
             <p id="description" class="subtitle is-3">Loads commands and run it with event handlers</p>
             <img id="hero" src="https://camo.githubusercontent.com/40129aa4640399b5e65cc3c101361a6a0b5d6467/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667">
             <hr>
-            <div id="content"><h2 class="subtitle is-2  is-spaced ">Creating a Collection to store Commands and Aliases</h2>
+            <div id="content"><h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#creating-a-collection-to-store-commands-and-aliases" id="creating-a-collection-to-store-commands-and-aliases">#</a> Creating a Collection to store Commands and Aliases</h2>
 <ul>
 <li>Open your <code>index.js</code></li>
 <li>Put the below code in that</li>
@@ -94,7 +95,7 @@
 client.aliases = new Discord.Collection();
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Creating a commands folder</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#creating-a-commands-folder" id="creating-a-commands-folder">#</a> Creating a commands folder</h2>
 <ul>
 <li>Create a folder <code>commands</code> in the directory</li>
 <li>Enter the below in <code>index.js</code></li>
@@ -112,7 +113,7 @@ client.aliases = new Discord.Collection();
 </code></pre>
 <div class="admonition info"><br><article class="message is-info"><div class="message-body">Commands folder is read using <code>fs</code>  module.</div></article></div>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Creating message event</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#creating-message-event" id="creating-message-event">#</a> Creating message event</h2>
 <ul>
 <li>Create a new file called <code>message.js</code> in <code>events</code> folder.</li>
 <li>Enter the below in <code>message.js</code></li>

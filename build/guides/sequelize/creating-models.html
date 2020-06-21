@@ -11,6 +11,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/assets/js/recommendations.js"></script>
+    <script src="/assets/js/scroll.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
         hljs.initLineNumbersOnLoad();
@@ -85,7 +86,7 @@
             <p id="description" class="subtitle is-3">How to define Models in Sequelize</p>
             <img id="hero" src="https://mherman.org/assets/img/blog/node-sequelize.png">
             <hr>
-            <div id="content"><h2 class="subtitle is-2  is-spaced ">Defining a Model</h2>
+            <div id="content"><h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#defining-a-model" id="defining-a-model">#</a> Defining a Model</h2>
 <pre style="background-color: #1C1D21; margin-bottom: 2rem; " class=" mt-3"><code class="language-javascript">const Sequelize = require(&quot;sequelize&quot;);
 const sequelize = new Sequelize('database', 'user', 'password', {
 	host: 'localhost',
@@ -100,7 +101,7 @@ const database = sequelize.define('nameOfTheTable', {
 });
 </code></pre>
 <hr>
-<h2 class="subtitle is-2  is-spaced ">Syncing the Models</h2>
+<h2 class="subtitle is-2  is-spaced "><a class="title-anchor" href="#syncing-the-models" id="syncing-the-models">#</a> Syncing the Models</h2>
 <ul>
 <li>The <code>Async/Await</code> Method</li>
 </ul>
