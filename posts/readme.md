@@ -32,92 +32,96 @@ writtenAt: 18 Jun 2020 14:28
         <i class="fab fa-facebook" style="margin-right: 5px"></i> Facebook
     </a>
 </div>
+
 <hr>
 
 ## Projects
-<div class="showcase">
-    <div class="columns">
-        <div class="column is-half">
-            <div class="box">
-                <div class="content">
-                    <h4 class="title is-3">API</h4>
-                    <p class="subtitle is-6">Swiss knife for Discord Developers</p>
-                    <a class="button is-danger" href="https://api.zyrouge.gq"><i class="fas fa-link" style="margin-right: 5px;"></i> Visit</a>
-                </div>
-            </div>
-        </div>
-        <div class="column is-half">
-            <div class="box">
-                <div class="content">
-                    <h4 class="title is-3">Genius Lyrics</h4>
-                    <p class="subtitle is-6">Fetch Lyrics from Genius.com at ease!</p>
-                    <div class="buttons">
-                        <a class="button is-warning" href="https://genius-lyrics.zyrouge.gq">
-                            <i class="fas fa-link" style="margin-right: 5px;"></i> Visit
-                        </a>
-                        <a class="button is-danger" href="https://npmjs.com/genius-lyrics">
-                            <i class="fab fa-npm" style="margin-right: 5px"></i> NPM
-                        </a>
-                        <a class="button is-dark" href="https://github.com/zyrouge/genius-lyrics">
-                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
-                        </a>
-                    </div>
-                </div>
+<div class="columns">
+    <div class="column is-half">
+        <div class="box">
+            <div class="content">
+                <h4 class="title is-3">API</h4>
+                <p class="subtitle is-6">Swiss knife for Discord Developers</p>
+                <a class="button is-danger" href="https://api.zyrouge.gq"><i class="fas fa-link" style="margin-right: 5px;"></i> Visit</a>
             </div>
         </div>
     </div>
-    <hr>
-    <p class="title is-3">Discord related projects</p>
-    <div class="columns">
-        <div class="column is-half">
-            <div class="box">
-                <div class="content">
-                    <h4 class="title is-3">Xeno Bot List</h4>
-                    <p class="subtitle is-6">Easy to setup and run bot list like top.gg</p>
-                    <div class="buttons">
-                        <a class="button is-info" href="https://botlist.zyrouge.gq">
-                            <i class="fas fa-link" style="margin-right: 5px"></i> Visit
-                        </a>
-                        <a class="button is-dark" href="https://github.com/zyrouge/xeno-bot-list">
-                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
-                        </a>
-                    </div>
+    <div class="column is-half">
+        <div class="box">
+            <div class="content">
+                <h4 class="title is-3">Genius Lyrics</h4>
+                <p class="subtitle is-6">Fetch Lyrics from Genius.com at ease!</p>
+                <div class="buttons">
+                    <a class="button is-warning" href="https://genius-lyrics.zyrouge.gq">
+                        <i class="fas fa-link" style="margin-right: 5px;"></i> Visit
+                    </a>
+                    <a class="button is-danger" href="https://npmjs.com/genius-lyrics">
+                        <i class="fab fa-npm" style="margin-right: 5px"></i> NPM
+                    </a>
+                    <a class="button is-dark" href="https://github.com/zyrouge/genius-lyrics">
+                        <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="column is-half">
-            <div class="box">
-                <div class="content">
-                    <h4 class="title is-3">Aurora</h4>
-                    <p class="subtitle is-6">A Multipurpose fun bot!</p>
-                    <div class="buttons">
-                        <a class="button is-dark" href="https://github.com/zyrouge/aurora-bot">
-                            <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <p class="title is-3">Languages & frameworks I know</p>
-    <div class="content">
-        <ul>
-            <li><a target="_blank" href="https://nodejs.org">NodeJS</a></li>
-            <li><a target="_blank" href="http://vanilla-js.com/">VanillaJS</a></li>
-            <li><a target="_blank" href="https://jquery.com/">JQuery</a></li>
-            <li><a target="_blank" href="https://vuejs.org/">Vue</a></li>
-            <li><a target="_blank" href="https://nuxtjs.org/">Nuxt</a></li>
-            <li><a target="_blank" href="https://www.typescriptlang.org/">Typescript</a></li>
-            <li>HTML & CSS</li>
-            <li>
-                <a target="_blank" href="https://discord.js.org">DiscordJS</a> & 
-                <a target="_blank" href="https://abal.moe/Eris">Eris</a>
-            </li>
-            <li>C++ Basics</li>
-        </ul>
     </div>
 </div>
+
+<hr>
+
+## Discord related projects
+<div class="columns">
+    <div class="column is-half">
+        <div class="box">
+            <div class="content">
+                <h4 class="title is-3">Xeno Bot List</h4>
+                <p class="subtitle is-6">Easy to setup and run bot list like top.gg</p>
+                <div class="buttons">
+                    <a class="button is-info" href="https://botlist.zyrouge.gq">
+                        <i class="fas fa-link" style="margin-right: 5px"></i> Visit
+                    </a>
+                    <a class="button is-dark" href="https://github.com/zyrouge/xeno-bot-list">
+                        <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half">
+        <div class="box">
+            <div class="content">
+                <h4 class="title is-3">Aurora</h4>
+                <p class="subtitle is-6">A Multipurpose fun bot!</p>
+                <div class="buttons">
+                    <a class="button is-dark" href="https://github.com/zyrouge/aurora-bot">
+                        <i class="fab fa-github" style="margin-right: 5px"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+## Languages & frameworks I know
+<div class="content">
+    <ul>
+        <li><a target="_blank" href="https://nodejs.org">NodeJS</a></li>
+        <li><a target="_blank" href="http://vanilla-js.com/">VanillaJS</a></li>
+        <li><a target="_blank" href="https://jquery.com/">JQuery</a></li>
+        <li><a target="_blank" href="https://vuejs.org/">Vue</a></li>
+        <li><a target="_blank" href="https://nuxtjs.org/">Nuxt</a></li>
+        <li><a target="_blank" href="https://www.typescriptlang.org/">Typescript</a></li>
+        <li>HTML & CSS</li>
+        <li>
+            <a target="_blank" href="https://discord.js.org">DiscordJS</a> & 
+            <a target="_blank" href="https://abal.moe/Eris">Eris</a>
+        </li>
+        <li>C++ Basics</li>
+    </ul>
+</div>
+
 <hr>
 
 ## Posts
@@ -128,5 +132,6 @@ writtenAt: 18 Jun 2020 14:28
             <i class="fas fa-search"></i>
         </span>
     </p>
-</div><br>
+</div>
+<br>
 <div id="recommendations-box"></div>

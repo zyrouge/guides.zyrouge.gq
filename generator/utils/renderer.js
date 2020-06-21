@@ -52,12 +52,7 @@ module.exports = ({ template, content, divID, navbar, footer, config }) => (new 
     contentDiv.querySelectorAll("h2").forEach(div => {
         const previousClasses = div.getAttribute("class") || "";
         div.setAttribute("class", `subtitle is-2  is-spaced ${previousClasses}`);
-
-        const previousContent = div.innerHTML || "";
-        if(previousContent) {
-            const encodedTitle = getTitleAnchor(previousContent);
-            div.set_content(`<a class="title-anchor" href="#${encodedTitle}" id="${encodedTitle}">#</a> ${previousContent}`);
-        }
+        attachAnchor(div);
     });
     contentDiv.querySelectorAll("h3").forEach(div => {
         const previousClasses = div.getAttribute("class") || "";
@@ -122,4 +117,13 @@ function getBulmaColor(color) {
 
 function getTitleAnchor(title) {
     return (title.toLowerCase().replace(/[^a-zA-Z0-9]/g, "-"));
+}
+
+function attachAnchor(div) {
+    const previousContent = div.innerHTML || "";
+    if (previousContent) {
+        const encodedTitle = getTitleAnchor(previousContent);
+        div.set_content(`<a class="title-anchor" href="#${encodedTitle}" id="${encodedTitle}">#</a> ${previousContent}`);
+    }
+    return div;
 }
