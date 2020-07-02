@@ -82,12 +82,16 @@ const fileHandler = (folder, file, path) => (new Promise(async (resolve, reject)
     const saveFileFolder = await createDirIfDoesnt(nodepath.join(outDir, folder));
     const saveFilePathJoined = nodepath.join(saveFileFolder, saveFileName + ".html");
     const saveFilePath = createFileIfDoesnt(saveFilePathJoined);
+    await fsp.writeFile(saveFilePath, renderedHTML, { encoding: "UTF8" });
+    const saveJSONPathJoined = nodepath.join(saveFileFolder, saveFileName + ".json");
+    const saveJSONPath = createFileIfDoesnt(saveJSONPathJoined);
+    const filteredJSON = { ...renderedMarkdown, env: null };
+    await fsp.writeFile(saveJSONPath, JSON.stringify(filteredJSON), { encoding: "UTF8" });
     routesArray.push({
         ...renderedMarkdown.meta,
         route: `${folder}/${formatRoute(saveFileName)}`,
         path: saveFilePathJoined
     });
-    await fsp.writeFile(saveFilePath, renderedHTML, { encoding: "UTF8" });
     logger.debug(`Processed File - ${prettifyDir(path)}`);
     resolve();
 }));
