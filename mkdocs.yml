@@ -1,0 +1,44 @@
+site_name: Zyrouge Blog
+repo_url: https://github.com/zyrouge/zyrouge-blog
+repo_name: zyrouge/zyrouge-blog
+docs_dir: mds
+site_dir: docs
+theme:
+  name: material
+  palette:
+    primary: light blue
+    accent: light blue
+    scheme: slate
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - def_list
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zyrouge
+    - icon: fontawesome/brands/discord
+      link: https://zyrouge.gq/discord
+    - icon: fontawesome/brands/youtube
+      link: https://zyrouge.gq/youtube
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/_zyrouge_
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/_zyrouge_
+    - icon: fontawesome/brands/steam
+      link: https://steamcommunity.com/id/_zyrouge_
+    - icon: fontawesome/brands/twitch
+      link: https://www.twitch.tv/zyrouge
+    - icon: fontawesome/brands/patreon
+      link: https://zyrouge.gq/patreon
+    - icon: fontawesome/brands/spotify
+      link: https://open.spotify.com/playlist/3RSl8EyfAO6kdpODN0jDfl?si=XgKkDqf0Rt6m9y2yERzEFA
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/user/zyrouge
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/zyrouge95
