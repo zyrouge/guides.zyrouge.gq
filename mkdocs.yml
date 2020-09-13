@@ -9,6 +9,8 @@ theme:
     primary: light blue
     accent: light blue
     scheme: slate
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
 plugins:
   - search
 markdown_extensions:

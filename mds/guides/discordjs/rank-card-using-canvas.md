@@ -24,7 +24,7 @@ Base:
 
 If you are a beginner, you can use [canvacord](https://www.npmjs.com/package/canvacord) to do this!
 
-```bash
+```console
 $ npm install canvacord
 ```
 
@@ -37,7 +37,7 @@ $ npm install canvacord
 
 Open your command prompt (or) powershell and run the following command.
 
-```bash
+```console
 $ npm install canvas
 ```
 

@@ -12,7 +12,7 @@ writtenAt: 18 Jun 2020 16:25
 ## Installing Sequelize
 
 ```console
-$ npm install sequelize
+ npm install sequelize
 ```
 
 ---

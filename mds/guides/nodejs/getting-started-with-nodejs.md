@@ -12,7 +12,7 @@ Download and install from [NodeJS Website](https://nodejs.org)
 ## Creating a Project
 
 ```console
-$ npm init
+ npm init
 ```
 
 ---
@@ -20,7 +20,7 @@ $ npm init
 ## Installing Modules
 
 ```console
-$ npm install module-name
+ npm install module-name
 ```
 
 ---
@@ -28,6 +28,6 @@ $ npm install module-name
 ## Installing Globally
 
 ```console
-$ npm install -g module-name
+ npm install -g module-name
 ```
 

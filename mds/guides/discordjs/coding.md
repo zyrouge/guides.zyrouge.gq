@@ -40,7 +40,7 @@ client.login('PUTYOURTOKENHERE');
 
 * Enter this in CMD to run the project.
 
-```bash
+```console
 $ node index.js
 ```
 
