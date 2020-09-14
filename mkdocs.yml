@@ -8,6 +8,8 @@ theme:
     primary: light blue
     accent: light blue
     scheme: slate
+  features:
+    - tabs
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
 plugins:
@@ -19,6 +21,8 @@ markdown_extensions:
       linenums: true
   - pymdownx.superfences
   - def_list
+  - toc:
+      permalink: true
 extra:
   social:
     - icon: fontawesome/brands/github
