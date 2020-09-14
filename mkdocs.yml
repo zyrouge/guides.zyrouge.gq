@@ -3,6 +3,7 @@ repo_url: https://github.com/zyrouge/zyrouge-blog
 repo_name: zyrouge/zyrouge-blog
 docs_dir: mds
 site_dir: docs
+edit_uri: tree/master/mds
 theme:
   name: material
   palette:
