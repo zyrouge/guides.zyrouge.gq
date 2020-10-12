@@ -5,11 +5,11 @@ docs_dir: docs
 theme:
   name: material
   palette:
-    primary: light blue
-    accent: light blue
+    primary: deep orange
+    accent: deep orange
     scheme: slate
   features:
-    - tabs
+    - navigation.tabs
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
 plugins:
