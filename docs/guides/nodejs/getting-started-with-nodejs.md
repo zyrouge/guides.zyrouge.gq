@@ -7,15 +7,11 @@ description: Installing NodeJS & NPM packages
 
 Download and install from [NodeJS Website](https://nodejs.org)
 
----
-
 ## Creating a Project
 
 ```console
  npm init
 ```
-
----
 
 ## Installing Modules
 
@@ -23,11 +19,8 @@ Download and install from [NodeJS Website](https://nodejs.org)
  npm install module-name
 ```
 
----
-
 ## Installing Globally
 
 ```console
  npm install -g module-name
 ```
-

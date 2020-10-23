@@ -22,8 +22,6 @@ fs.readdir("./events/", (error, files) => {
 });
 ```
 
----
-
 ## Handling ready event
 
 * Create a new file called `ready.js` in `events` folder.

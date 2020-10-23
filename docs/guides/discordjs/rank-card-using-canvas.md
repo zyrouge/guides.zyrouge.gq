@@ -18,8 +18,6 @@ Base:
 
 <img src="/assets/images/discord-js-rank-card.png">
 
----
-
 ## Alternative
 
 If you are a beginner, you can use [canvacord](https://www.npmjs.com/package/canvacord) to do this!
@@ -31,8 +29,6 @@ $ npm install canvacord
 !!! info
     Canvacord has the same code below!
 
----
-
 ## Installing Canvas
 
 Open your command prompt (or) powershell and run the following command.
@@ -40,8 +36,6 @@ Open your command prompt (or) powershell and run the following command.
 ```console
 $ npm install canvas
 ```
-
----
 
 ## Creating a canvas
 
@@ -52,8 +46,6 @@ const Canvas = require("canvas");
 const canvas = Canvas.createCanvas(934, 282); // Use this measurement if you are using the card in this tutorial
 const ctx = canvas.getContext("2d");
 ```
-
----
 
 ## Rank Card base
 
@@ -70,8 +62,6 @@ ctx.drawImage(rankCard, 0, 0, canvas.width, canvas.height);
 const font = "Arial"; // Default font
 ```
 
----
-
 ## Username
 
 Now lets write the username on the card
@@ -84,8 +74,6 @@ const name = username > 7 ? username.substring(0, 7).trim() + '...' : username; 
 ctx.fillText(`${name}`, 264, 164); // Writing the username
 ```
 
----
-
 ## Discrim
 
 Writing Discriminator (`#0950`) in the card
@@ -96,8 +84,6 @@ ctx.fillStyle = "rgba(255, 255, 255, 0.4)"; // Reducing opacity using rgba
 ctx.textAlign = "start";
 if(discrim) ctx.fillText(`#${discrim}`, ctx.measureText(name).width + 10 + 316, 164); // Writing discrim
 ```
-
----
 
 ## Level
 
@@ -112,8 +98,6 @@ ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
 ctx.fillText("LEVEL", 934 - 64 - ctx.measureText(level).width - 16, 82); // Writing "LEVEL"
 ```
 
----
-
 ## Rank
 
 Writing the Rank (`#10`) of the user in the card
@@ -127,8 +111,6 @@ ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
 ctx.fillText("RANK", 934 - 64 - ctx.measureText(level).width - 16 - ctx.measureText(`LEVEL`).width - 16 - ctx.measureText(rank).width - 16, 82); // Writing "RANK"
 ```
 
----
-
 ## Writing Current and Needed EXP
 
 You must calculate proper value of current experience points and the maximum expirence point of the current level. This is also needed for progress bar in the card.
@@ -141,8 +123,6 @@ ctx.fillText("/ " + neededXP, 624 + ctx.measureText(currentXP).width + 10, 164);
 ctx.fillStyle = "#ffffff";
 ctx.fillText(currentXP, 624, 164);
 ```
-
----
 
 ## Progress bar
 
@@ -174,8 +154,6 @@ let widthXP = (currentXP * 615) / neededXP;
 if (widthXP > 615 - 18.5) widthXP = 615 - 18.5;
 ```
 
----
-
 ## Avatar
 
 Finally drawing the avatar of the user
@@ -188,15 +166,12 @@ ctx.drawImage(avatar, 85, 66, 150, 150);
 !!! info
     If you want a circle avatar you can clip the path before drawing the avatar!
 
----
-
 ## Getting the Buffer
 
 ```javascript
 const card = canvas.toBuffer();
 ```
 
----
 ## Full Code
 
 
@@ -266,8 +241,6 @@ ctx.drawImage(avatar, 85, 66, 150, 150);
 
 const card = canvas.toBuffer();
 ```
-
----
 
 ## Other Examples
 

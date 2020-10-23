@@ -16,8 +16,6 @@ module.exports = {
 }
 ```
 
----
-
 ## Finding mentioned User or look for the ID
 
 ```js
@@ -31,8 +29,6 @@ module.exports = {
     }
 }
 ```
-
----
 
 ## Checking if the member is kickable
 
@@ -48,8 +44,6 @@ module.exports = {
     }
 }
 ```
-
----
 
 ## Kicking the member
 
@@ -73,8 +67,6 @@ module.exports = {
     }
 }
 ```
-
----
 
 ## Full Code
 

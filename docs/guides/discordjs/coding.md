@@ -8,16 +8,12 @@ description: How to use discord.js to run a bot
 * Create a file named `index.js` in the main directory.
 * I recommend using a IDE like Visual Studio Code or others like Atom, IDEA for easy programming.
 
----
-
 ## Creating Client in the Main File
 
 ```javascript
 const Discord = require("discord.js");
 const client = Discord.Client();
 ```
-
----
 
 ## Login in the bot
 
@@ -33,8 +29,6 @@ client.login('PUTYOURTOKENHERE');
 
 !!! danger
     Never revealed your Token to anyone!
-
----
 
 ## Running the Code
 

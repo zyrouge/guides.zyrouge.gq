@@ -1,9 +1,6 @@
 ---
 title: Creating a Key
-description: How to create a Key in Sequelize Model
-tags: zyrouge, sequelize
-image: https://mherman.org/assets/img/blog/node-sequelize.png
-writtenAt: 18 Jun 2020 16:35
+description: How to create a Key in Sequelize Model=
 ---
 
 ## Creating a Key

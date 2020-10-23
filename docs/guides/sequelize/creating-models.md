@@ -1,9 +1,6 @@
 ---
 title: Creating Models
 description: How to define Models in Sequelize
-tags: zyrouge, sequelize
-image: https://mherman.org/assets/img/blog/node-sequelize.png
-writtenAt: 18 Jun 2020 16:35
 ---
 
 ## Defining a Model
@@ -22,8 +19,6 @@ const database = sequelize.define('nameOfTheTable', {
 	value: Sequelize.NUMBER
 });
 ```
-
----
 
 ## Syncing the Models
 

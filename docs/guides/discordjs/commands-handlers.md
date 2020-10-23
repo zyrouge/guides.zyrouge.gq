@@ -13,8 +13,6 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 ```
 
----
-
 ## Creating a commands folder
 
 * Create a folder `commands` in the directory
@@ -35,8 +33,6 @@ fs.readdir("./commands/", (error, files) => {
 
 !!! info
     Commands folder is read using `fs`  module.
-
----
 
 ## Creating message event
 

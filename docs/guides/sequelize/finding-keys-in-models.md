@@ -1,9 +1,6 @@
 ---
 title: Finding a Key
 description: How to find a specific key in the Database
-tags: zyrouge, sequelize
-image: https://mherman.org/assets/img/blog/node-sequelize.png
-writtenAt: 18 Jun 2020 16:35
 ---
 
 ## Finding only One

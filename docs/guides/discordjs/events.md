@@ -5,10 +5,8 @@ description: Understanding Discord.JS events
 
 * Discord.JS triggers certain events when a `message` is sent or `ready` when the bot is ready.
 
-!!! info
-    All the events can be referred here [https://discord.js.org/\#/docs/main/stable/class/Client](https://discord.js.org/#/docs/main/stable/class/Client)
-
----
+!!! tip
+    All the events can be referred [here](https://discord.js.org/#/docs/main/stable/class/Client)
 
 ## Creating Event Handlers
 
@@ -19,8 +17,6 @@ client.on('eventName', (args) => {
     // Handle the events here
 });
 ```
-
----
 
 ## Example
 
