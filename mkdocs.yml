@@ -1,17 +1,16 @@
 site_name: Zyrouge Blog
-repo_url: https://github.com/zyrouge/zyrouge-blog
-repo_name: zyrouge/zyrouge-blog
+repo_url: https://github.com/zyrouge/guides.zyrouge.gq
+repo_name: zyrouge/guides
 docs_dir: docs
 theme:
   name: material
   palette:
-    primary: deep orange
-    accent: deep orange
+    primary: red
+    accent: red
     scheme: slate
-  features:
-    - navigation.tabs
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
+  font: false
 plugins:
   - search
 markdown_extensions:
@@ -47,6 +46,9 @@ extra:
       link: https://www.reddit.com/user/zyrouge
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/zyrouge95
+copyright: Copyright © 2020 Zyrouge Development
 google_analytics:
   - UA-164033529-2
   - auto
+extra_css:
+  - assets/css/custom.css

@@ -1,9 +1,9 @@
 ---
 title: Home
-description: Welcome to my blog!
+description: Welcome to Zyrouge Guides!
 ---
 
-Hello 👋 everyone, welcome to my blog!
+Hello 👋 everyone, welcome to my guides page!
 
 ## Who am I?
 
