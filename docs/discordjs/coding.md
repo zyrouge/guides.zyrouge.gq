@@ -28,7 +28,7 @@ client.login('PUTYOURTOKENHERE');
 ```
 
 !!! danger
-    Never revealed your Token to anyone!
+    Never reveal your Token to anyone!
 
 ## Running the Code
 
