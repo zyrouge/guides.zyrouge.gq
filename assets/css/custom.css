@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #e74141;
+  --md-default-bg-color: #1e1e1e;
+  --md-typeset-a-color: #e74141;
+  --md-footer-bg-color: #e74141;
+  --md-footer-bg-color--dark: #c93838;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+pre,
+code,
+kbd {
+  font-family: "Fira Code", monospace;
+}
